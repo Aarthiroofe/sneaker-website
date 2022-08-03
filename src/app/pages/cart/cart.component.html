@@ -1,0 +1,49 @@
+<hr>
+<div class="container-fluid">
+
+   <div class="row body" >
+   <div class="col-12 col-xl-8 col-lg-8 col-md-8 col-sm-8">
+    <div>
+    <h4>Your Shopping Cart</h4>
+    <table class="carttable"  *ngFor="let product of cartreceivedata; let i =index;">
+        <tr>
+            <td style="width:5% ;"><p>{{i+1}}</p><p>{{product.id}}</p></td>
+            <td style="width:15% ;"> <img class="cartimage" src={{product.pimage}}></td>
+            <td style="width:35% ;"> <p>{{product.productname1}}{{product.productname2  }}<br>{{product.price}}RWF</p></td>    
+            <td style="width:10% ;"> <table>
+                <td (click)="decrement(product)" style="width: 30px;cursor: pointer;"><p>-</p></td>
+                <td><button type="number" class="count"  style="width: 30px;">{{product.count}}</button></td>
+                <td (click)="increment(product)"  style="width: 30px;cursor: pointer;"><p>+</p></td>
+            </table></td>
+            <td style="width:35% ;">{{product.countingprice }}RWF</td>
+        </tr>
+    </table>
+    </div>
+   </div>
+   <div class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-4 right"  >
+     <p>Order Summary</p>
+     <table class="ordersumary">
+        <tr>
+            <td>Sub total</td>
+            <td  style="text-align: end;">{{totalprice}}RWF</td>
+        </tr>
+        <tr>
+            <td>Delivery Fee</td>
+            <td  style="text-align: end;"  >0RWF</td>  
+           
+        </tr>
+       
+     </table>
+     <hr>
+     <table class="ordersumary">
+        <tr>
+            <td>Total</td>
+            <td  style="text-align: end;"> {{totalprice}}RWF</td>
+            
+        </tr>
+     </table>
+</div>
+
+   </div>
+</div>
+

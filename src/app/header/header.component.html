@@ -1,0 +1,43 @@
+<div class="">
+    <nav class="navbar navbar-expand-md navbar-light d-flex justify-content-evenly" >
+        <a class="navbar-brand" href="#"><img  class="navbarimage" src="./assets/Subtract.png"><h1 style="    margin-top: 8px;">SC.</h1></a>
+        <button class="navbar-toggler" type="button" (click)="navcollapse()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" [class.collapse]="navbaractive" >
+            <div class="col-12 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 d-flex justify-content-center"  > 
+          <ul class="navbar-nav mr-auto ">
+            <li class="nav-item active">
+              <a class="nav-link "  href="#"><span class="navdatas">New Arrivals</span>  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#"><span class="navdatas">Men</span> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#"><span class="navdatas">Women</span> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#"><span class="navdatas">Kids</span> </a>
+            </li>
+          </ul>
+            </div>
+            <div class="col-12 col-xl-2 col-lg-2 col-md-2  col-sm-12 col-xs-12 d-flex justify-content-evenly"> 
+                <div>
+                    
+                    <img src="./assets/fi_shopping-cart.png" routerLinkActive="active"  style="cursor:pointer ;" (click)="cartpage()">
+                    <p class="notification">{{notification}}</p>
+                    </div>
+                    <div>
+                    <img src="./assets/heart.png">
+                    </div>
+                    <div>
+                    <img src="./assets/fi_user.png">
+    
+                    </div>
+            </div>
+        </div>
+      </nav>
+    </div>
+    <!-- <div>
+      <header></header>
+    </div> -->

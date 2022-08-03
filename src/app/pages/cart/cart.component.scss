@@ -1,0 +1,50 @@
+.navbar-brand{
+    display: flex;
+    margin-left: 50px;
+}
+.navbarimage{
+    padding: 10px;
+    margin-left: 30%;
+}
+.navdatas{
+    color: black;
+    margin: 0px 10px;
+    font-weight: 600;
+}
+.body{
+    padding: 0px 40px 40px 40px;
+}
+.count{
+    border: 1px solid #e7dada;
+    text-align: center;
+    border-radius: 7px;
+}
+.cartimage{
+    height: 100px;
+    width: 100px;
+}
+.carttable{
+    width: 100%;
+    text-align: center;
+    background-color: #efebe7;
+}
+.right{
+    padding: 10px 50px;
+}
+.ordersumary{
+    width: 100%;
+}
+.notification{
+    position: absolute;
+    top: 10px;
+    margin-left: 8px;
+    border: solid;
+    padding-left: 7px;
+    height: 30px;
+    width: 30px;
+    border-radius: 16px;
+    color: white;
+    background-color: red;
+    font-weight: 900;
+}
+

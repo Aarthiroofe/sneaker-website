@@ -1,0 +1,142 @@
+<div class="row first">
+
+    <div class="row">
+      <div class="col-12 col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 item_1">
+            <div>
+              <h1 class="Sub_item">
+              {{imagedata.productname1}}<br><br>
+              {{imagedata.productname2}}
+              </h1>
+          </div>
+          <div >
+              <p class="Sub_item_2">{{imagedata.description}}</p>
+            
+          </div>
+          <div class="Sub_item_3">
+              <h2 >{{imagedata.price}}RWF</h2>
+          </div>
+          <div>
+              <button class="Sub_item_4" (click)="addtocart()">Add to cart</button>
+          </div>
+
+      </div>
+      <div class="col-12 col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
+          <div  class="Sub_item_5"  >
+              <img class="bigimge" src={{imagedata.pimage}}>
+              <div class="row d-flex justify-content-end subimages">
+
+                  <div class="col-12 col-lg-2 col-xl-2 col-md-2  " *ngFor="let image of mainproducts; let i = index;">
+                      <img (click)="alldatas(image)" class="smallimages" src={{image.pimage}} style="cursor:pointer ;"> 
+              </div>
+              
+                  <!-- <img class="Sub_item_6" src="/assets/Rectangle 9.png"
+                  <img class="Sub_item_6" src="/assets/Rectangle 6.png">
+                  <img class="Sub_item_6" src="/assets/Rectangle 9.png"> -->
+              </div>  
+              <!-- <img src={{mainproducts.pimage}} alt=""> -->
+          </div>
+      </div>
+      <!-- <div class="row">  
+          
+      </div> -->
+      
+    </div>
+   
+  </div>
+ 
+  <div class="row  item_2">
+      <div class="col-12 col-xl-3 col-lg-3 col-md-3 col-sm-1">    
+
+      </div>
+      <div class="d-flex justify-content-around " >
+          <div>
+              <img class="Sub_item_6" src="./assets/Nike Air Force.png">
+              <img class="Sub_item_6" src="./assets/Nike1.png">
+              <img class="Sub_item_6" src="./assets/Nike Air Force (2).png">
+          </div>
+          <div class="findthat">
+              <p >Find that<br>Sneaker You Want <img src="./assets/Vector (2).png"></p>
+          </div>
+      </div>
+      <div class="col-12 col-xl-3 col-lg-3 col-md-3 col-sm-3">
+
+      </div>
+
+  </div>
+<div class="row body">
+  <h4 style="font-weight:700 ;">All the new arrivals</h4>
+  <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 " *ngFor="let product of allproducts; let i = index;" >
+      <div class="product" *ngIf="i<4" (click)="gotodetails(i)">
+        <img class="productimage" src={{product.pimage}} style="cursor:pointer ;">
+      </div>
+      <div *ngIf="i<4" >
+        <h4>{{product.productname1}}{{product.productname2}}</h4>
+        <p>{{product.price}}RWF</p>
+      </div>
+    </div>       
+</div>
+<div class="Sub_item_6">
+ <p (click)="listingpage()" class="viewall" >View all new <img src="./assets/Vector (2).png"></p>
+</div>
+<div class="Sub_item_7">
+<div>
+  <h2>Good Sneakers<br>
+  take your good places</h2>
+  <p>look no further,this is where you find the best pair!</p>
+</div>
+</div>
+<div class="row ">
+  <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="Sub_item_8">
+          <div class="menimage">
+          <h3  class="Currated" >Currated </h3>
+          <img src="./assets/Group.png" class="imagesub" >
+      </div> 
+     <h3>& unique collection</h3>
+      </div>
+  </div>
+  <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="Sub_item_9">
+          <img src="./assets/original 1.png" >                                               
+     <h3>100% Original sneakers</h3>
+      </div>
+  </div>
+  <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+      <div class="Sub_item_10">
+          <div class="flyimage">
+              <h3>Buy the latest</h3><img src="./assets/Group (1).png">
+          </div>
+     <h3>&define the trends</h3>
+      </div>
+  </div>
+  
+</div>
+
+<hr class="Sub_item_11">
+<div class="Sub_item_12">
+  <div class="Sub_item_13">
+  <img  class="bottomimage" src="./assets/Subtract.png"><h1 style="    margin-top: 8px;">SC.</h1>
+</div>
+</div>
+<div class="row Sub_item_12">
+ <div class="col-12 col-xl-5 col-lg-5 col-md-5 col-sm-12 ">
+    <p>We don't just sell shoes we sell memories and collectibles.We collect the best in the 
+      vest with an attention to all little details.We know that Shos speaks louder 
+  than words that's why we've mastered the science of good sneakers.</p>
+ </div>
+</div>
+<div class="row Sub_item_15">
+  <div class="col-12 col-xxl-6 col-xl-6 col-lg-5 col-md-12 col-sm-12">
+      <div class="  Sub_item_14">
+          <p>Don't missout on once-in-while-deals:<img class="socialicons" src="./assets/fi_twitter.png" > <img class="socialicons" src="./assets/fi_instagram.png" ><img class="socialicons" src="./assets/fi_facebook.png" >
+          </p>
+       </div>
+  </div>
+  <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12">
+      <p>Support line:250 788 467 808</p>
+  </div>   
+  <div class="col-12 col-xxl-3 col-xl-3 col-lg-4 col-md-12 col-sm-12">
+      <p>Copyright 2021@Sneaker City ltd</p>
+  </div>  
+  </div> 
+

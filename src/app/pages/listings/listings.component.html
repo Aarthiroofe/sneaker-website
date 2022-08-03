@@ -1,0 +1,102 @@
+<hr>
+<div class="container-fluid">
+
+
+    <div class="row">   
+        <div class="col-12 col-xl-3 col-lg-3 col-md-3 col-sm-4">
+            <div class="brands">
+                <h4>Brand</h4>
+            </div>
+             <!-- <p (click)="filter('Nike')"> nike</p> -->
+            <div class="checkbox">
+                <div class="form-check" >
+                    <input (click)="filter('Nike',$event)" class="form-check-input" type="checkbox" value="Nike" id="brand1">
+                        
+                    <label class="form-check-label" for="brand1">
+                    Nike
+                    </label>
+                </div>
+                <div class="form-check" (click)="filter('Jordan',$event)">
+                    <input class="form-check-input" type="checkbox" value="Jordan" id="brand2" >
+                    <label class="form-check-label" for="brand2">
+                    Jordan
+                    </label>
+                </div>
+                <div class="form-check" (click)="filter('Adidas',$event)">
+                    <input class="form-check-input" type="checkbox" value="Adidas" id="brand3" >
+                    <label class="form-check-label" for="brand3">
+                    Adidas
+                    </label>
+                </div>
+                <div class="form-check" (click)="filter('fila',$event)">
+                    <input class="form-check-input" type="checkbox" value="fila" id="brand4" >
+                    <label class="form-check-label" for="brand4">
+                      Fila
+                    </label>
+                </div>
+                <div class="form-check" (click)="filter('Gucci',$event)">
+                    <input class="form-check-input" type="checkbox" value="Gucci" id="brand5" >
+                    <label class="form-check-label" for="brand5">
+                        Gucci
+                    </label>
+                </div>
+                <div class="form-check" (click)="filter('Balenciaga',$event)">
+                    <input class="form-check-input" type="checkbox" value="Balenciaga" id="brand6" >
+                    <label class="form-check-label" for="brand6">
+                        Balenciaga
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <!-- <div class="pricerange">
+                <h4>Price range</h4>
+            <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>  -->
+ <!-- <div>Lower Range Value: {{value}}</div>
+ <div>High Range Value: {{highValue}}</div> -->
+<!-- </div> -->
+<hr>
+<div class="size">
+    <h4>Size</h4>
+    <button class="sizebutton" (click)="sizefilter32()">32</button>
+    <button class="sizebutton" (click)="sizefilter33()">33</button>
+    <button class="sizebutton"(click)="sizefilter34()" >34</button>
+    <button class="sizebutton" (click)="sizefilter35()">35</button>
+    <button class="sizebutton" (click)="sizefilter36()">36</button>
+    <button class="sizebutton" (click)="sizefilter37()">37</button>
+    <button class="sizebutton" (click)="sizefilter38()">38</button>
+    <button class="sizebutton"(click)="sizefilter39()">39</button>
+    <button class="sizebutton" (click)="sizefilter40()">40</button>
+    <button class="sizebutton" (click)="sizefilter41()">41</button>
+    <button class="sizebutton" (click)="sizefilter42()">42</button>
+
+</div>
+
+    </div>
+    <div class="col-12 col-xl-9 col-lg-9 col-md-9 col-sm-8">
+          <div class="row">
+            <h4 style="font-weight:700 ;">The new arrivals</h4>
+                <div class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12 " *ngFor="let product of filterCategory; let i = index;" >
+                    <div class="product"  (click)="gotodetails(i)">
+                        <img class="productimage" src={{product.pimage}}>
+                      </div>
+                      <!-- <div *ngIf="i<4" > -->
+                        <h4 class="productname">{{product.productname1}}{{product.productname2}}</h4>
+                        <p>{{product.price}}RWF</p>
+                      <!-- </div> -->
+                </div>
+          </div>
+    <hr class="hrline">
+     <div class="row">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+            <p>Don't missout on once-in-while-deals:<img class="socialicons" src="/assets/fi_twitter.png" > <img class="socialicons" src="/assets/fi_instagram.png" ><img class="socialicons" src="/assets/fi_facebook.png" >
+            </p>
+            <p>Support line:250 788 467 808</p>
+        </div>
+        <div class="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-end">
+            <p style="margin-top: 38px;">Copyright 2021@Sneaker City ltd</p>
+        </div>
+     </div>
+
+    </div>
+    </div>
+</div>
